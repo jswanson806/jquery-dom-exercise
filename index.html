@@ -74,7 +74,35 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
-  // Add your code here!
+  //Part I
+  //1
+  $(document).ready(function () {
+    console.log("Let's get ready to party with jQuery!");
+  })
+  //2
+  $('img').addClass('image-center');
+  //3
+  $('p:last-of-type').remove();
+  //4
+  $('h1').css('font-size', function () {
+    return Math.floor(Math.random() * 100);
+  });
+  //5
+  $('ol').append($('<li>I was added!</li>'));
+  //6
+  $('aside').children().remove();
+  $('aside').append('p').text('Sorry about the list');
+  //7
+    $('.form-control').on('keyup blur change', function(){
+    let r = $('.form-control').eq(0).val();
+    let b = $('.form-control').eq(1).val();
+    let g = $('.form-control').eq(2).val();
+    $('body').css('background-color', "rgb(" + r + ',' + g + ',' + b + ")");
+  });
+  //8
+  $('img').on('click', function(){
+    $(this).remove();
+  })
 </script>
 </body>
 
